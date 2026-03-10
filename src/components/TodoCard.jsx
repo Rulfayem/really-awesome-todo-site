@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 
-export default function TodoCard({ Todo }) {
-    const completed = Todo.completed;
+export default function TodoCard({ todo }) {
+    const completed = todo.completed;
     const border = completed ? "success" : "danger";
     return (
         <>

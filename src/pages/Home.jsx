@@ -16,9 +16,9 @@ export default function Home() {
 }
 
 function CardGroup({ todos }) {
-    return todos.map((todos) => {
+    return todos.map((todo) => {
         return (
-            <Col md={4} key={todos.id}>
+            <Col md={4} key={todo.id}>
                 <TodoCard todo={todo} />
             </Col>
         );
