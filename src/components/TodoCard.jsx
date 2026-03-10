@@ -59,6 +59,9 @@ export default function TodoCard({ todo }) {
                     <Button onClick={resetTimer} className="ms-2">
                         <i className="bi bi-arrow-clockwise"></i>
                     </Button>
+                    <Button variant="secondary" href={`todos/${todo.id}`} className="ms-2">
+                        <i className="bi bi-pencil"></i>
+                    </Button>
                     <Button variant="danger" onClick={deleteTodo} className="ms-2">
                         <i className="bi bi-trash3"></i>
                     </Button>
