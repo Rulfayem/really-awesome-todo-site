@@ -23,6 +23,12 @@ export default function TodoCard({ todo }) {
         setTimerInterval(null);
     }
 
+    const resetTimer = () => {
+        clearInterval(timerInterval);
+        setTimerInterval(null);
+        setTimer(0);
+    }
+
     useEffect(() => {
         return () => {
             clearInterval(timerInterval);
@@ -39,8 +45,11 @@ export default function TodoCard({ todo }) {
                     <Button onClick={startTimer}>
                         <i className="bi bi-play"></i>
                     </Button>
-                    <Button onClick={pauseTimer} className="mx-2">
+                    <Button onClick={pauseTimer} className="ms-2">
                         <i className="bi bi-pause-fill"></i>
+                    </Button>
+                    <Button onClick={resetTimer} className="ms-2">
+                        <i className="bi bi-arrow-clockwise"></i>
                     </Button>
                 </Card.Body>
             </Card>
